@@ -11,7 +11,24 @@ import SwiftUI
 struct MapLocatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView
+            {
+                ContentView()
+                    .tabItem {
+                        Image(systemName: "globe.americas")
+                        Text("Places")
+                    }
+                
+                BookView()
+                    .tabItem {
+                        Image(systemName: "car")
+                        Text("Book")
+                    }
+            }
+            
         }
+        
+        
     }
+    
 }
