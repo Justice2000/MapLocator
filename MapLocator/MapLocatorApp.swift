@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct MapLocatorApp: App {
+    @State private var username: String = ""
     var body: some Scene {
         WindowGroup {
             TabView
@@ -21,8 +22,13 @@ struct MapLocatorApp: App {
                 
                 BookView()
                     .tabItem {
-                        Image(systemName: "car")
+                        Image(systemName: "figure.wave")
                         Text("Book")
+                    }
+                BookingsView()
+                    .tabItem {
+                        Image(systemName: "car")
+                        Text("Bookings")
                     }
             }
             
